@@ -1,0 +1,44 @@
+use casetudy_database;
+
+-- 23.cTạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong với yêu cầu 
+-- sp_them_moi_hop_dong phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, 
+-- với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
+
+-- delimiter //
+-- create procedure sp_them_moi_hop_dong (
+-- p_ma_hop_dong int ,
+-- p_ngay_lam_hop_dong datetime ,
+-- p_ngay_ket_thuc datetime ,
+-- p_tien_dat_coc double ,
+-- p_ma_nhan_vien int,
+-- p_ma_khach_hang int,
+-- p_ma_dich_vu int,
+-- p_ma_nhan_vien int,
+-- p_ma_khach_hang int ,
+-- p_ma_dich_vu int
+-- )
+-- begin 
+-- insert into hop_dong (
+-- ma_hop_dong ,
+-- ngay_lam_hop_dong  ,
+-- ngay_ket_thuc  ,
+-- tien_dat_coc ,
+-- ma_nhan_vien,
+-- ma_khach_hang ,
+-- ma_dich_vu ,
+-- foreign key(ma_nhan_vien) references nhan_vien (ma_nhan_vien),
+-- foreign key(ma_khach_hang) references khach_hang(ma_khach_hang),
+-- foreign key(ma_dich_vu) references dich_vu(ma_dich_vu)
+--  values
+-- (p_ma_hop_dong  ,
+-- p_ngay_lam_hop_dong  ,
+-- p_ngay_ket_thuc  ,
+-- p_tien_dat_coc  ,
+-- p_ma_nhan_vien ,
+-- p_ma_khach_hang ,
+-- p_ma_dich_vu ,
+-- p_ma_nhan_vien ,
+-- p_ma_khach_hang  ,
+-- p_ma_dich_vu);
+-- end//
+-- delimiter ;

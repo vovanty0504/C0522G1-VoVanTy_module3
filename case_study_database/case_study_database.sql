@@ -33,6 +33,7 @@ dia_chi varchar(45) ,
 ma_vi_tri int,
 ma_trinh_do int ,
 ma_bo_phan int,
+nhan_vien_bi_xoa bit default 0,
 foreign key (ma_vi_tri) references vi_tri(ma_vi_tri),
 foreign key (ma_trinh_do) references trinh_do(ma_trinh_do),
 foreign key (ma_bo_phan) references bo_phan(ma_bo_phan)
@@ -167,7 +168,7 @@ values
 insert into khach_hang (ma_khach_hang,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,
 so_dien_thoai,email,dia_chi,ma_loai_khach)
 values 
-(1,'Nguyễn Thị Hào','1970-11-07',0,'643431213','0945423362','thihao07@gmail.com','23 Nguyễn Hoàng, Đà Nẵng',4),
+(1,'Nguyễn Thị Hào','1970-11-07',0,'643431213','0945423362','thihao07@gmail.com','23 Nguyễn Hoàng, Đà Nẵng',5),
 (2,'Phạm Xuân Diệu','1992-08-08',1,'1865342123','0954333333','xuandieu92@gmail.com','K77/22 Thái Phiên, Quảng Trị',3),
 (3,'Trương Đình Nghệ','1990-02-27',1,'488645199','0373213122','nghenhan2702@gmail.com','K323/12 Ông Ích Khiêm, Vinh',1),
 (4,'Dương Văn Quan','1981-07-08',1,'543432111','0490039241','duongquan@gmail.com','K453/12 Lê Lợi, Đà Nẵng',1),
@@ -197,7 +198,7 @@ insert into dich_vu (ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_
 dien_tich_ho_boi, so_tang, dich_vu_mien_phi_di_kem, ma_kieu_thue, ma_loai_dich_vu)
 values 
 (1,'Villa Beach Front',25000,1000000,10,'vip','Có hồ bơi',500,4,null,3,1),
-(2,'House Princess 01',14000,5000000	,7,'vip','Có thêm bếp nướng',null,3,null,2,2),
+(2,'House Princess 01',14000,5000000,7,'vip','Có thêm bếp nướng',null,3,null,2,2),
 (3,'Room Twin 01',15000,1000000,2,'normal','Có tivi',null,null,'1 Xe máy 1 Xe đạp',4,3),
 (4,'Villa No Beach Front',22000,9000000,8,'normal','Có hồ bơi',300,3,null,3,1),
 (5,'House Princess 02',10000,4000000,5,'normal','Có thêm bếp nướng',null,2,null,3,2),
