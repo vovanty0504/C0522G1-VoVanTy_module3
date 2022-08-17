@@ -1,0 +1,24 @@
+
+#element1{
+    color: blue;
+    font-family: Tahoma;
+    font-size: 200%;
+}
+#element2{
+    color: red;
+    font-family: Arial;
+    font-size: 120%;
+    border: 1px solid grey;
+    padding: 10px;
+}
+#element3{
+     color: yellow;
+ }
+
+ /*a{*/
+ /*    color: red;*/
+ /*    font-family: Arial;*/
+ /*    font-size: 120%;*/
+ /*    border: 1px solid grey;*/
+ /*    padding: 10px;*/
+ /*}*/
