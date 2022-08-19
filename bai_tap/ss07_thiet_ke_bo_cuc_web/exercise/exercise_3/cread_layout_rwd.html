@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .row1 {
+            display: flex;
+        }
+
+
+        #menu {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            border: 1px solid #CDCDCD;
+        }
+
+        #menu ul, #menu li {
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li a {
+            width: 100px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background-color: black;
+            color: white;
+        }
+
+        #menu ul ul li a {
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        #menu li a:hover {
+            background-color: red;
+        }
+
+        #menu ul ul {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        #menu {
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+<div class="row" id="menu">
+    <div class="col-12" style="background-color: black">
+        <div class="col-11" style="float: left">
+            <ul>
+                <li style="margin-top: 15px" id="logo"><a>Logo</a></li>
+
+                <li style="margin-top: 15px"><a href="#">Home</a>
+                    <ul>
+                        <li><a href="#"> Link</a></li>
+                        <li><a href="#"> Link</a></li>
+                        <li><a href="#"> Link</a></li>
+
+                    </ul>
+                </li>
+                <li style="margin-top: 15px"><a href="#">About</a>
+                    <ul>
+                        <li><a href="#"> Link</a></li>
+                        <li><a href="#"> Link</a></li>
+                        <li><a href="#"> Link</a></li>
+
+                    </ul>
+                </li>
+                <li style="margin-top: 15px"><a href="#">Projects</a>
+                    <ul>
+                        <li><a href="#"> Link</a></li>
+                        <li><a href="#"> Link</a></li>
+                        <li><a href="#"> Link</a></li>
+
+                    </ul></li>
+                <li style="margin-top: 15px"><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+        <div class="col-1" style="float: left">
+            <div><img style="width: 30px;height: 30px ;float: left;margin-top: 20px" src="logo_login.jpg"></div>
+            <div style="color: white;margin-top: 27px">Logo</div>
+        </div>
+
+
+    </div>
+</div>
+<div class="row1">
+    <div class="col-12">
+        <div class="col-2" style="background-color: lightgoldenrodyellow;height: 500px;float: left"></div>
+        <div class="col-8" style="background-color: white;height: 500px;float: left">
+            <div class="row">
+                <h1 style="margin-left: 10px"> Welcome</h1>
+
+            </div>
+
+            <div class="row">
+                <p style="margin-left: 10px">Việt Nam, quốc hiệu chính thức là Cộng hòa Xã hội chủ nghĩa Việt Nam, là một quốc gia nằm ở cực Đông
+                    của bán đảo Đông Dương thuộc khu vực Đông Nam Á, giáp với Lào, Campuchia, Trung Quốc, biển Đông và
+                    vịnh Thái Lan.
+
+                    Lãnh thổ Việt Nam xuất hiện con người sinh sống từ thời đại đồ đá cũ. Lịch sử Việt Nam cổ đại bắt
+                    đầu với các nhà nước Văn Lang, Âu Lạc. Âu Lạc bị nhà Triệu từ phương Bắc thôn tính vào đầu thế kỷ
+                    thứ 2 TCN; sau đó là thời kỳ Bắc thuộc kéo dài hơn một thiên niên kỷ. Chế độ quân chủ độc lập được
+                    tái lập sau chiến thắng của Ngô Quyền trước nhà Nam Hán. Sự kiện này mở đường cho các triều đại độc
+                    lập kế tiếp và trong suốt giai đoạn lịch sử trung đại, quốc gia này tiếp tục giành chiến thắng trước
+                    các cuộc chiến tranh xâm lược từ phương Bắc và dần mở rộng về phía nam. Thời kỳ Bắc thuộc cuối cùng
+                    kết thúc sau chiến thắng trước nhà Minh của nghĩa quân Lam Sơn.</p>
+            </div>
+            <div class="row">
+
+                <pre style="margin-left: 10px">
+                   <h1>Test</h1>
+Lorem Ipsum...</pre>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="col-2" style="background-color: lightgoldenrodyellow;height: 500px;float: left">
+            <div class="row" style="border-radius: 5px;background-color: white;width: 150px;margin: 48px">
+                <p style="margin-left: 40%">ADS</p>
+            </div>
+            <div class="row" style="border-radius: 5px;background-color: white;width: 150px;margin: 48px">
+                <p style="margin-left: 40%">ADS</p>
+            </div>
+            <div class="row"></div>
+        </div>
+
+    </div>
+</div>
+<div class="row1" style="background-color: gray">
+    <h3 style="margin-left: 50%">Võ Văn Tý</h3>
+</div>
+
+</body>
+</html>
