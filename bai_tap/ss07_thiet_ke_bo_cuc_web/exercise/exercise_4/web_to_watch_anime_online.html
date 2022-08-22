@@ -4,54 +4,66 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .col-1 {
-            width: 8.33%;
-        }
 
-        .col-2 {
-            width: 16.66%;
+        /*màn hình điện thoai*/
+        @media only screen and (max-width:740px ){
+            .col-s-1 {width: 8.33333%;}
+            .col-s-2 {width: 16.66667%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33333%;}
+            .col-s-5 {width: 41.66667%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33333%;}
+            .col-s-8 {width: 66.66667%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33333%;}
+            .col-s-11 {width: 91.66667%;}
+            .col-s-12 {width: 100%;}
+            /*tăng kích thước font cho dễ đọc*/
+            li{
+                font-size: 40px;
+                text-align: center;
+                color: white;
+            }
+            p{
+                font-size: 35px;
+                color: white;
+            }
+            .title{
+                font-size: 55px;
+                color: white;
+            }
         }
-
-        .col-3 {
-            width: 25%;
+        /*Màn hinh laptop và máy tính bảng*/
+        @media only screen and (min-width:741px)and (max-width:1240px){
+            .col-m-1 {width: 8.33333%;}
+            .col-m-2 {width: 16.66667%;}
+            .col-m-3 {width: 25%;}
+            .col-m-4 {width: 33.33333%;}
+            .col-m-5 {width: 41.66667%;}
+            .col-m-6 {width: 50%;}
+            .col-m-7 {width: 58.33333%;}
+            .col-m-8 {width: 66.66667%;}
+            .col-m-9 {width: 75%;}
+            .col-m-10 {width: 83.33333%;}
+            .col-m-11 {width: 91.66667%;}
+            .col-m-12 {width: 100%;}
         }
-
-        .col-4 {
-            width: 33.33%;
+        /*Màn hình máy tính pc và tivi smart*/
+        @media only screen and (min-width:1241px){
+            .col-l-1 {width: 8.33333%;}
+            .col-l-2 {width: 16.66667%;}
+            .col-l-3 {width: 25%;}
+            .col-l-4 {width: 33.33333%;}
+            .col-l-5 {width: 41.66667%;}
+            .col-l-6 {width: 50%;}
+            .col-l-7 {width: 58.33333%;}
+            .col-l-8 {width: 66.66667%;}
+            .col-l-9 {width: 75%;}
+            .col-l-10 {width: 83.33333%;}
+            .col-l-11 {width: 91.66667%;}
+            .col-l-12 {width: 100%;}
         }
-
-        .col-5 {
-            width: 41.66%;
-        }
-
-        .col-6 {
-            width: 50%;
-        }
-
-        .col-7 {
-            width: 58.33%;
-        }
-
-        .col-8 {
-            width: 66.66%;
-        }
-
-        .col-9 {
-            width: 75%;
-        }
-
-        .col-10 {
-            width: 83.33%;
-        }
-
-        .col-11 {
-            width: 91.66%;
-        }
-
-        .col-12 {
-            width: 100%;
-        }
-
         ul {
             float: left;
             list-style: none;
@@ -97,12 +109,12 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-12" style="background-color: #CDCDCD;height: 100px">
+    <div class="col-l-12" style="background-color: #CDCDCD;height: 100px">
         <img src="sieu_nhan.jpg" style="height: 50px;width: 120px;margin-top:25px">
     </div>
 </div>
 <div class="row">
-    <div class="col-12" style="background-color: wheat;height: 50px">
+    <div class="col-s-12 col-m-12 col-l-12" style="background-color: wheat;height: 50px">
         <ul>
             <li style=" border-right-style: solid;">
                 <p>
@@ -128,7 +140,7 @@
     </div>
 </div>
 <div class="row" id="body" style="float: left">
-    <div class="col-3">
+    <div class="col-s-12 col-m-5 col-l-3">
         <div class="row1">
             <div>
                 <img src="ngoi_lang.jpg">
@@ -162,7 +174,7 @@
         </div>
     </div>
 
-    <div class="col-9">
+    <div class="col-s-12 col-m-7 col-l-9">
         <div class="row1">
             <iframe width="1088" height="612" src="https://www.youtube.com/embed/JSkvXq-IeM0"
                     title="Siêu Nhân Gao Tập Đặc Biệt | 5 Anh Em Siêu Nhân Triệu Tập Gao Thú" frameborder="0"
@@ -208,7 +220,7 @@
     </div>
 </div>
 <div class="row12">
-    <div class="col-12" style="background-color:wheat;height:50px;width: 100%;clear: both">
+    <div class="col-l-12" style="background-color:wheat;height:50px;width: 100%;clear: both">
         <p style="margin-left: 50%;">Võ Văn Tý</p>
     </div>
 </div>
