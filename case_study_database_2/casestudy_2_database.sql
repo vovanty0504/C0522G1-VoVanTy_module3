@@ -105,10 +105,8 @@ end_date datetime not null,
 deposit double not null,
 employee_id int,
 customer_id int,
-facility_id int,
-foreign key (employee_id) references employee(id),
-foreign key (customer_id) references customer(id),
-foreign key (facility_id) references facility(id)
+facility_id int
+
 );
 
 create table attach_facility(
@@ -123,8 +121,6 @@ create table contract_detali(
 	id int primary key,
     contract_id int,
     attach_facility_id int,
-    quantity int not null,
-    foreign key (contract_id) references contract(id),
-    foreign key(attach_facility_id) references attach_facility(id)
+    quantity int not null
 );
 
