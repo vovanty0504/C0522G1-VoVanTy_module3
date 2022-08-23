@@ -21,10 +21,13 @@ WHERE
         AND khach_hang.dia_chi LIKE '%Vinh'
         OR khach_hang.dia_chi LIKE '%Quảng Ngãi';
      
+     select * 
+     from khach_hang;
      
 --      12.Hiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), so_dien_thoai (khách hàng),
 --      ten_dich_vu, so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem),
---      tien_dat_coc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2020 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
+--      tien_dat_coc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2020 nhưng chưa từng được 
+-- khách hàng đặt vào 6 tháng đầu năm 2021.
 
 SELECT 
     hop_dong.ma_hop_dong,
@@ -33,7 +36,7 @@ SELECT
     khach_hang.so_dien_thoai AS so_dien_thoai_khach_hang,
     dich_vu.ma_dich_vu,
     dich_vu.ten_dich_vu,
-    SUM(hop_dong_chi_tiet.so_luong) as so_luong_dich_vu_di_kem,
+    SUM(hop_dong_chi_tiet.so_luong) AS so_luong_dich_vu_di_kem,
     hop_dong.tien_dat_coc
 FROM
     hop_dong
@@ -48,13 +51,13 @@ FROM
 WHERE
     (MONTH(hop_dong.ngay_lam_hop_dong) BETWEEN 10 AND 12
         AND YEAR(hop_dong.ngay_lam_hop_dong) = 2020)
-        AND hop_dong.ma_hop_dong NOT IN (SELECT 
+        AND hop_dong.ma_hop_dong NOT IN (
+        SELECT 
             hop_dong.ma_hop_dong
         FROM
             hop_dong
-        WHERE
-            (MONTH(hop_dong.ngay_lam_hop_dong) BETWEEN 1 AND 6
-                AND YEAR(hop_dong.ngay_lam_hop_dong) = 2021))
+        WHERE   (MONTH(hop_dong.ngay_lam_hop_dong) BETWEEN 1 AND 6 AND YEAR(hop_dong.ngay_lam_hop_dong) = 2021))
+               
 GROUP BY hop_dong.ma_hop_dong;
 
 -- 13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
@@ -69,16 +72,15 @@ FROM
         JOIN
     hop_dong_chi_tiet ON dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
 GROUP BY hop_dong_chi_tiet.ma_dich_vu_di_kem
-HAVING so_luong_dich_vu_di_kem = (SELECT 
-        SUM(so_luong) AS so_luong_dich_vu_di_kem
+HAVING so_luong_dich_vu_di_kem = (
+SELECT 
+        max(so_luong)
     FROM
-        hop_dong_chi_tiet
-    GROUP BY ma_dich_vu_di_kem
-    ORDER BY so_luong DESC
-    LIMIT 1);
-    
+        hop_dong_chi_tiet);
+--     
     -- 14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
---     Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
+--     Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung 
+-- (được tính dựa trên việc count các ma_dich_vu_di_kem).
 
 select 
 hop_dong.ma_hop_dong, 
@@ -110,4 +112,4 @@ join bo_phan on nhan_vien.ma_bo_phan = bo_phan.ma_bo_phan
 join hop_dong on nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
 where (year(hop_dong.ngay_lam_hop_dong) between 2020 and 2021 )
 group by nhan_vien.ma_nhan_vien
-having (count(nhan_vien.ma_nhan_vien)) <=3
+having count(nhan_vien.ma_nhan_vien) <=3

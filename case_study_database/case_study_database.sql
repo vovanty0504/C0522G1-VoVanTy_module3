@@ -57,6 +57,7 @@ so_dien_thoai varchar(45) not null ,
 email varchar(45) ,
 dia_chi varchar(45) ,
 ma_loai_khach int ,
+khach_hang_bi_xoa bit default 0,
 foreign key(ma_loai_khach) references loai_khach(ma_loai_khach)
 );
 
@@ -104,6 +105,7 @@ ma_hop_dong int primary key,
 ngay_lam_hop_dong datetime not null,
 ngay_ket_thuc datetime not null,
 tien_dat_coc double not null,
+hop_dong_bi_xoa bit default 0,
 ma_nhan_vien int,
 ma_khach_hang int,
 ma_dich_vu int,
