@@ -47,6 +47,7 @@ position_id int,
 education_degree_id int,
 division_id int,
 username varchar(255),
+is_delete bit default 0,
 foreign key(position_id) references `position`(id),
 foreign key(education_degree_id) references education_degree(id),
 foreign key(division_id) references division(id),
@@ -68,6 +69,7 @@ id_card varchar(45) not null,
 phone_number varchar(45) not null,
 email varchar(45),
 address varchar(45),
+is_delete bit default 0,
 foreign key (customer_type_id) references customer_type(id)
 );
 
@@ -94,6 +96,7 @@ description_other_convenience varchar(45),
 pool_area double,
 number_of_floors int,
 facility_free text,
+is_delete bit default 0,
 foreign key(rent_type_id) references rent_type(id),
 foreign key(facility_type_id) references facility_type(id)
 );
@@ -106,6 +109,7 @@ deposit double not null,
 employee_id int,
 customer_id int,
 facility_id int,
+is_delete bit default 0,
 foreign key (employee_id) references employee(id),
 foreign key (customer_id) references customer(id),
 foreign key (facility_id) references facility(id)
