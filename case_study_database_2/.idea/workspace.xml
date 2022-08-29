@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c40b9e5-3ecb-41fc-8763-3f5aaab55d04" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/impl/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/impl/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/user/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.65/webapps/ROOT/user/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/repository/impl/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/classes/java/main/service/impl/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/libs/practice_1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/libs/practice_1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/java/service/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/webapp/user/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc_querying_transaction/practice/src/main/webapp/user/edit.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2E1QlVaEwy93QE3QjRFsxZ4eCTI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../casestudy_2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c40b9e5-3ecb-41fc-8763-3f5aaab55d04" name="Changes" comment="" />
+      <created>1661760761795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661760761795</updated>
+      <workItem from="1661760762967" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

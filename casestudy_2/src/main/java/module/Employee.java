@@ -4,7 +4,7 @@ public class Employee {
     private int employeeId;
     private String employeeName;
     private String employeeDateOfBirth;
-    private int employeeIdCard;
+    private String employeeIdCard;
     private double employeeSalary;
     private String employeePhoneNumber;
     private String employeeEmail;
@@ -16,8 +16,23 @@ public class Employee {
     public Employee() {
     }
 
+    public Employee(String employeeName, String employeeDateOfBirth, String employeeIdCard, double employeeSalary,
+                    String employeePhoneNumber, String employeeEmail, String employeeAddress, int positionId,
+                    int educationDegreeId, int divisionId) {
+        this.employeeName = employeeName;
+        this.employeeDateOfBirth = employeeDateOfBirth;
+        this.employeeIdCard = employeeIdCard;
+        this.employeeSalary = employeeSalary;
+        this.employeePhoneNumber = employeePhoneNumber;
+        this.employeeEmail = employeeEmail;
+        this.employeeAddress = employeeAddress;
+        this.positionId = positionId;
+        this.educationDegreeId = educationDegreeId;
+        this.divisionId = divisionId;
+    }
+
     public Employee(int employeeId, String employeeName, String employeeDateOfBirth,
-                    int employeeIdCard, double employeeSalary, String employeePhoneNumber,
+                    String employeeIdCard, double employeeSalary, String employeePhoneNumber,
                     String employeeEmail, String employeeAddress, int positionId,
                     int educationDegreeId, int divisionId) {
         this.employeeId = employeeId;
@@ -57,11 +72,11 @@ public class Employee {
         this.employeeDateOfBirth = employeeDateOfBirth;
     }
 
-    public int getEmployeeIdCard() {
+    public String getEmployeeIdCard() {
         return employeeIdCard;
     }
 
-    public void setEmployeeIdCard(int employeeIdCard) {
+    public void setEmployeeIdCard(String employeeIdCard) {
         this.employeeIdCard = employeeIdCard;
     }
 

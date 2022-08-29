@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CustomerTypeRepository implements ICustomerTypeRepository {
     private static final String SELECT_ALL_CUSTOMER_TYPE = "select * from customer_type;";
-    private static final String INSERT_CUSTOMEr_TYPE_SQL = "INSERT INTO customer_type " +
+    private static final String INSERT_CUSTOMER_TYPE_SQL = "INSERT INTO customer_type " +
             "(customer_type_id, customer_type_name) VALUES (?, ?);";
 
     public List<CustomerType> findByAll() {
@@ -36,7 +36,7 @@ public class CustomerTypeRepository implements ICustomerTypeRepository {
     public boolean create(CustomerType customerType) {
         Connection connection = BaseRepository.getConnectDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMEr_TYPE_SQL);
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMER_TYPE_SQL);
             preparedStatement.setInt(1, customerType.getCustomerTypeId());
             preparedStatement.setString(2, customerType.getCustomerTypeName());
             int num = preparedStatement.executeUpdate();

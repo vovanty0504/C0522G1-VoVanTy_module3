@@ -34,7 +34,7 @@
        alt="">
 
   <div class="container-fluid text-end my-4 me-4">
-    <span class="badge text-bg-warning mt-3">Huỳnh Trung Thuyên</span>
+    <span class="badge text-bg-warning mt-3">Võ Văn Tý</span>
   </div>
 </div>
 
@@ -51,7 +51,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
              aria-expanded="false">Employee</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Employee list</a></li>
+            <li><a class="dropdown-item" href="/Employee">Employee list</a></li>
             <li><a class="dropdown-item" href="#">Add new Employee</a></li>
           </ul>
         </li>

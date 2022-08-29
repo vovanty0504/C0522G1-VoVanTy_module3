@@ -2,6 +2,7 @@ package service;
 
 import module.User;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserService {
@@ -19,4 +20,8 @@ public interface IUserService {
     List<User> sortByName();
 
     List<User> findByCountry(String name);
+
+    User getUserById(int id);
+
+    boolean insertUserStore(User user) throws SQLException;
 }

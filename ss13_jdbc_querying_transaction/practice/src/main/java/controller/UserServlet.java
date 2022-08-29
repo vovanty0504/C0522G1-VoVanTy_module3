@@ -10,7 +10,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "UserServlet",urlPatterns = {"", "/user"})
+@WebServlet(name = "UserServlet", urlPatterns = {"", "/user"})
 public class UserServlet extends HttpServlet {
     private IUserService userService = new UserService();
 
@@ -106,6 +106,7 @@ public class UserServlet extends HttpServlet {
     private void showFormDelete(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         User user = userService.selectUser(id);
+//        User user = userService.getUserById(id);
         RequestDispatcher dispatcher;
         if (user == null) {
             dispatcher = request.getRequestDispatcher("error_404.jsp");
@@ -122,9 +123,9 @@ public class UserServlet extends HttpServlet {
 
 
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) {
+        List<User> userList = userService.findByAll();
         int id = Integer.parseInt(request.getParameter("id"));
         userService.deleteUser(id);
-        List<User> userList = userService.findByAll();
         request.setAttribute("user", userList);
         try {
             request.getRequestDispatcher("user/list.jsp").forward(request, response);
@@ -150,9 +151,16 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User user = new User(id, name, email, country);
-        userService.update(user);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/edit.jsp");
-        requestDispatcher.forward(request, response);
+        boolean check = userService.update(user);
+        String mess = "sửa thành công";
+        if (!check) {
+            mess = "sửa không thành công";
+
+        }
+        request.setAttribute("messg", mess);
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/edit.jsp");
+//        requestDispatcher.forward(request, response);
+        showFormEdit(request,response);
     }
 
     private void showFormAdd(HttpServletRequest request, HttpServletResponse response) {

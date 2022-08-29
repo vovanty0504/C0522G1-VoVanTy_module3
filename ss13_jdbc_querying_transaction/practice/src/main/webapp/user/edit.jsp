@@ -14,8 +14,8 @@
 <body>
 <h1>Sửa</h1>
 <p>
-    <c:if test='${requestScope["mess"] != null}'>
-        <span class="mess">${requestScope["mess"]}</span>
+    <c:if test='${requestScope["messg"] != null}'>
+        <span class="mess">${requestScope["messg"]}</span>
     </c:if>
 </p>
 <p>

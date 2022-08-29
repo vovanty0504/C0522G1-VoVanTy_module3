@@ -5,10 +5,12 @@ import repository.IUserRepository;
 import repository.impl.UserRepository;
 import service.IUserService;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserService implements IUserService {
     private IUserRepository userRepository = new UserRepository();
+
     @Override
     public List<User> findByAll() {
         return userRepository.findByAll();
@@ -35,7 +37,6 @@ public class UserService implements IUserService {
     }
 
 
-
     @Override
     public List<User> sortByName() {
         return userRepository.sortByName();
@@ -44,5 +45,15 @@ public class UserService implements IUserService {
     @Override
     public List<User> findByCountry(String name) {
         return userRepository.findByCountry(name);
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return userRepository.getUserById(id);
+    }
+
+    @Override
+    public boolean insertUserStore(User user) throws SQLException {
+      return userRepository.insertUserStore(user);
     }
 }
