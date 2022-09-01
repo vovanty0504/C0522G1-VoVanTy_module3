@@ -13,6 +13,8 @@ import java.util.List;
 
 public class PositionRepository implements IPositionRepository {
     private static final String SELECT_ALL_POSITION = "select * from position;";
+    private static final String INSERT_POSITION = "insert into `position`(position_id,position_name) values (?,?)";
+
 
     @Override
     public List<Position> findAll() {
@@ -31,4 +33,21 @@ public class PositionRepository implements IPositionRepository {
         }
         return positionList;
     }
+
+    @Override
+    public boolean create(Position position) {
+        Connection connection = BaseRepository.getConnectDB();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_POSITION);
+            preparedStatement.setInt(1, position.getPositionId());
+            preparedStatement.setString(2, position.getPositionName());
+            int num = preparedStatement.executeUpdate();
+            return (num == 1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
 }

@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface IPositionRepository {
     List<Position> findAll();
+
+    boolean create(Position position);
+
+
 }

@@ -81,14 +81,15 @@
             </div>
 
             <div class="mt-3 form-group">
-                <label for="customerType">Customer Type:</label>
-                <select id="customerType" class="form-control" name="customerType">
-                    <option value="1">Diamond</option>
-                    <option value="2">Platinium</option>
-                    <option value="3" selected>Gold</option>
-                    <option value="4" selected>Silver</option>
-                    <option value="5" selected>Member</option>
-                </select>
+                <label class="h6" for="customerType">Customer Type:</label>
+                <div class="input-group">
+                    <select id="customerType" class="form-control" name="customerType">
+
+                        <c:forEach var="type" items="${customerTypeList}">
+                            <option >${type.customerTypeName}</option>
+                        </c:forEach>
+                    </select>
+                </div>
             </div>
 
             <div class="mt-3 text-center">

@@ -17,11 +17,11 @@ create table employee(
 employee_id int primary key auto_increment,
 employee_name varchar(45) not null,
 employee_birthday date not null,
-employee_id_card varchar(45) not null,
+employee_id_card varchar(45) not null unique,
 employee_salary double not null,
 employee_phone varchar(45) not null,
 employee_email varchar(45),
-employee_address varchar(45),
+employee_address varchar(245),
 position_id int,
 education_degree_id int,
 division_id int,
@@ -42,7 +42,7 @@ customer_gender bit(1) null,
 customer_id_card varchar(45) not null,
 customer_phone varchar(45) not null,
 customer_email varchar(45),
-customer_address varchar(45),
+customer_address varchar(245),
 customer_type_id int,
 is_delete bit default 0,
  foreign key(customer_type_id) references customer_type(customer_type_id)
@@ -131,7 +131,7 @@ values
 ('Nguyễn Hữu Hà','1993-01-01','534323231','8000000','0941234553','nhh0101@gmail.com','4 Nguyễn Chí Thanh, Huế',2,3,2),
 ('Nguyễn Hà Đông','1989-09-03','234414123','9000000','0642123111','donghanguyen@gmail.com','111 Hùng Vương, Hà Nội',2,4,4),
 ('Tòng Hoang','1982-09-03','256781231','6000000','0245144444','hoangtong@gmail.com','213 Hàm Nghi, Đà Nẵng',2,4,4),
-('Nguyễn Công Đạo','1994-01-08','755434343','8000000','0988767111','nguyencongdao12@gmail.com','6 Hoà Khánh, Đồng Nai',2,3,2);
+('Nguyễn Công Đạo','1994-01-08','755434343','8000000','0988767111','ngemployeeuyencongdao12@gmail.com','6 Hoà Khánh, Đồng Nai',2,3,2);
 insert into customer_type(customer_type_name)
 values
 ('Diamond'),
@@ -202,3 +202,83 @@ values
 (1,1,3),
 (2,1,2),
 (2,12,2);
+
+
+delimiter //
+create procedure employee_delete(in p_id int)
+begin
+update employee
+ set is_delete = 1
+ where employee_id = p_id;
+end//
+delimiter ;
+
+delimiter //
+create procedure sp_update_employee(
+p_id int,
+p_name varchar(50),
+p_birthday varchar(50),
+p_id_card varchar(50),
+p_salary double,
+p_phone varchar(50),
+p_email varchar(50),
+p_address varchar(50),
+p_position_id int,
+p_education_degree_id int,
+p_division_id int
+)
+begin
+update employee
+set
+employee_name = p_name ,
+employee_birthday = p_birthday,
+employee_id_card = p_id_card ,
+employee_salary = p_salary  ,
+employee_phone = p_phone,
+employee_email = p_email ,
+employee_address = p_address ,
+position_id = p_position_id,
+education_degree_id = p_education_degree_id,
+division_id = p_division_id
+where employee_id = p_id;
+end//
+delimiter ;
+
+delimiter //
+create procedure customer_delete(in p_id int)
+begin
+update customer
+ set is_delete = 1
+ where customer_id = p_id;
+end//
+delimiter 
+-- call sp_update_employee(1,'Nguyễn  An', '1994-01-08','456231786','10000000','0901234121','annguyen@gmail.com','295 Nguyễn Tất Thành, Đà Nẵng',1,3,1)
+
+delimiter //
+create procedure sp_update_customer(
+p_id int,
+p_name varchar(50),
+p_birthday varchar(50),
+p_gender int,
+p_id_card varchar(255),
+p_phone varchar(50),
+p_email varchar(50),
+p_address varchar(50),
+p_customer_type_id int
+)
+begin
+update customer
+set
+customer_name = p_name ,
+customer_birthday = p_birthday,
+customer_gender = p_gender  ,
+customer_id_card = p_id_card ,
+customer_phone = p_phone,
+customer_email = p_email ,
+customer_address = p_address ,
+customer_type_id = p_customer_type_id
+where customer_id = p_id;
+end//
+delimiter ;
+
+-- call sp_update_customer(1,'Nguyễn Thị ','1970-11-07',0,'643431213','0945423362','thihao07@gmail.com','23 Nguyễn Hoàng, Đà Nẵng',5)

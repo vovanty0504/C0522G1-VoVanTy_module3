@@ -51,8 +51,8 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
              aria-expanded="false">Employee</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/Employee">Employee list</a></li>
-            <li><a class="dropdown-item" href="#">Add new Employee</a></li>
+            <li><a class="dropdown-item" href="/employee">Employee list</a></li>
+            <li><a class="dropdown-item" href="/employee?action=create">Add new Employee</a></li>
           </ul>
         </li>
 
@@ -61,7 +61,7 @@
              aria-expanded="false">Customer</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/customer">Customer list</a></li>
-            <li><a class="dropdown-item" href="/customer/create.jsp">Add new Customer</a></li>
+            <li><a class="dropdown-item" href="/customer?action=create">Add new Customer</a></li>
           </ul>
         </li>
 
@@ -94,16 +94,39 @@
 </nav>
 
 <div class="container-fluid" style="height: 520px">
-  <div class="row mx-3">
-    <div class="col-2">
-      <p class="ms-3 mt-3">Item One</p>
-      <p class="ms-3 mt-3">Item Two</p>
-      <p class="ms-3 mt-3">Item Three</p>
+  <div class="row" style="margin: 0">
+    <div class="col-2 " style="margin: 0">
+      <div class="row" style="height: 250px">
+        <iframe  src="https://www.youtube.com/embed/IjlT_4mvd-c" title="The Furama Resort DaNang - Couples Corporate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="row" style="height: 250px; margin-top: 10px">
+        <iframe src="https://www.youtube.com/embed/PgvSSl4jm1U" title="Furama Resort Đà Nẵng" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="row"></div>
+<%--      <p class="ms-3 mt-3">Item One</p>--%>
+<%--      <p class="ms-3 mt-3">Item Two</p>--%>
+<%--      <p class="ms-3 mt-3">Item Three</p>--%>
     </div>
 
     <div class="col-10">
-      <img class="img-fluid" src="img.png" alt="">
+      <img width="100%" height="520" id="img" onclick="changeImage()"
+           src="https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior_Courtyard-Night.jpg"
+           alt="">
     </div>
+    <script>
+      var index = 1;
+      changeImage = function () {
+        var imgs = ["https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior_Courtyard-Night.jpg",
+          "https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior-Lobby.jpg",
+          "https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Resort_Exterior-Lagoon-Pool.jpg"];
+        document.getElementById('img').src = imgs[index];
+        index++;
+        if (index == 3) {
+          index = 0;
+        }
+      }
+      setInterval(changeImage, 2000);
+    </script>
   </div>
 </div>
 

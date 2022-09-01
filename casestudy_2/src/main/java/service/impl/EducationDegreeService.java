@@ -14,4 +14,9 @@ public class EducationDegreeService implements IEducationDegreeService {
     public List<EducationDegree> findAll() {
         return iEducationDegreeRepository.findAll();
     }
+
+    @Override
+    public boolean create(EducationDegree educationDegree) {
+        return iEducationDegreeRepository.create(educationDegree);
+    }
 }

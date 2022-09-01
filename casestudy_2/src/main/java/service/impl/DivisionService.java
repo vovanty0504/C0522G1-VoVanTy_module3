@@ -14,4 +14,9 @@ public class DivisionService implements IDivisionService {
     public List<Division> findAll() {
         return iDivisionRepository.findAll();
     }
+
+    @Override
+    public boolean create(Division division) {
+        return iDivisionRepository.create(division);
+    }
 }

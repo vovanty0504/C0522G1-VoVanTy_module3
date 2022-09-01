@@ -14,4 +14,9 @@ public class PositionService implements IPositionService {
     public List<Position> findAll() {
         return iPositionRepository.findAll();
     }
+
+    @Override
+    public boolean create(Position position) {
+        return iPositionRepository.create(position);
+    }
 }
