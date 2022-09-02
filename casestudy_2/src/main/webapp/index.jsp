@@ -67,9 +67,9 @@
 
         <li class="nav-item dropdown ms-3">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-             aria-expanded="false">Service</a>
+             aria-expanded="false">Facility</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Facility list</a></li>
+            <li><a class="dropdown-item" href="/facility">Facility list</a></li>
             <li><a class="dropdown-item" href="#">Add new Facility</a></li>
           </ul>
         </li>

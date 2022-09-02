@@ -83,12 +83,13 @@
             <div class="mt-3 form-group">
                 <label class="h6" for="customerType">Customer Type:</label>
                 <div class="input-group">
-                    <select id="customerType" class="form-control" name="customerType">
 
+                    <select id="customerType" class="form-control" name="customerType">
                         <c:forEach var="type" items="${customerTypeList}">
-                            <option >${type.customerTypeName}</option>
+                            <option value="${type.customerTypeId}">${type.customerTypeName}</option>
                         </c:forEach>
                     </select>
+
                 </div>
             </div>
 

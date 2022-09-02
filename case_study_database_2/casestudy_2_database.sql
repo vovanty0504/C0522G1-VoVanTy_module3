@@ -282,3 +282,14 @@ end//
 delimiter ;
 
 -- call sp_update_customer(1,'Nguyễn Thị ','1970-11-07',0,'643431213','0945423362','thihao07@gmail.com','23 Nguyễn Hoàng, Đà Nẵng',5)
+
+delimiter //
+create procedure facility_delete(in p_id int)
+begin
+update facility
+ set is_delete = 1
+ where facility_id = p_id;
+end//
+delimiter 
+
+call facility_delete(1);

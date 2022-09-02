@@ -158,7 +158,7 @@ public class CustomerServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        int customerType = Integer.parseInt(request.getParameter("customerType"));
+        int customerType = Integer.parseInt(request.getParameter(" "));
         Customer customer = new Customer(name, dayOfBirth, gender, idCard, phone, email, address, customerType);
         boolean check = iCustomerService.create(customer);
         String mess = "Add new Customer successfully!";
