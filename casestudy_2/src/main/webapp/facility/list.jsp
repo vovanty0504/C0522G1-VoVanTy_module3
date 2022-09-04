@@ -46,12 +46,13 @@
                 <input class="form-control me-2" type="text" placeholder="Input search Name" aria-label="Search"
                        name="nameSearch">
 
-                <input class="form-control me-2" type="text" placeholder="Input search address" aria-label="Search"
-                       name="addressSearch">
+              <select class="form-control me-2" name="facilityTypeSearch">
+                  <option value="">Facility type</option>
+                  <c:forEach var="facilityType" items="${facilityTypeList}">
+                      <option value="${facilityType.facilityTypeName}">${facilityType.facilityTypeName}</option>
+                  </c:forEach>
+              </select>
 
-
-                <input class="form-control me-2" type="text" placeholder="Input search phone" aria-label="Search"
-                       name="phoneSearch">
 
                 <button class="btn btn-outline-success" type="submit" name="action" value="search">
                     <i class="fa-solid fa-magnifying-glass"></i></button>
@@ -94,7 +95,7 @@
                 <td class="text-center">${facility.facilityFree}</td>
                 <td class="text-center">
                 <c:forEach var="rentType" items="${rentTypeList}">
-                    <c:if test="${rentType.rentTypeId == facility.facilityId}">
+                    <c:if test="${rentType.rentTypeId == facility.rentTypeId}">
                        ${rentType.rentTypeName}
                     </c:if>
                 </c:forEach>

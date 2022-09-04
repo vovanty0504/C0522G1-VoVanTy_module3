@@ -164,7 +164,7 @@ values
 ("Giờ");
 insert into facility(facility_name, facility_area, facility_cost, max_people, standard_room, description_other_convenience, pool_area, number_of_floors, facility_free, rent_type_id, facility_type_id)
 values
-('Villa Beach Front','25000','10000000',10,'vip','Có hồ bơi',500,4,null,3,1),
+('Villa Beach Front','25000','10000000',10,'vip','Có hồ bơi',500,4,null,1,1),
 ('House Princess 01','14000','5000000',7,'vip','Có thêm bếp nướng',null,3,null,2,2),
 ('Room Twin 01','5000','1000000',2,null,null,null,null,'1 Xe máy, 1 Xe đạp',4,3),
 ('Villa No Beach Front','22000','9000000',8,'normal','Có hồ bơi',300,3,null,3,1),
@@ -292,4 +292,40 @@ update facility
 end//
 delimiter 
 
-call facility_delete(1);
+-- call facility_delete(1);
+
+delimiter //
+create procedure sp_update_facility(
+p_id int,
+p_name varchar(50),
+p_area int,
+p_cost double,
+p_max_people int,
+p_standard_room varchar(50),
+p_d_o_c varchar(50),
+p_pool_area double,
+p_number_of_floors int,
+p_facility_free varchar(50),
+p_rent_type_id int,
+p_facility_type_id int
+)
+
+begin
+update facility
+set
+ facility_name = p_name,
+ facility_area = p_area,
+ facility_cost = p_cost,
+ max_people = p_max_people,
+ standard_room = p_standard_room,
+ description_other_convenience = p_d_o_c,
+ pool_area = p_pool_area,
+ number_of_floors = p_number_of_floors ,
+ facility_free = p_facility_free,
+ rent_type_id =p_rent_type_id,
+ facility_type_id =p_facility_type_id
+where facility_id = p_id;
+end//
+delimiter ;
+
+-- call sp_update_facility(1,'Villa Beach Frontaaaa','25000','10000000',10,'vip','Có hồ bơi',500,4,null,3,1);

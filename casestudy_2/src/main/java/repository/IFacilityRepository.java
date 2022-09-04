@@ -13,4 +13,10 @@ public interface IFacilityRepository {
     Facility findById(int id);
 
     boolean updateFacility (Facility facility);
+
+    boolean create(Facility facility);
+
+    List<Facility> search(String nameSearch, String facilityTypeSearch);
+
 }
+

@@ -28,4 +28,14 @@ public class FacilityService implements IFacilityService {
     public boolean updateFacility(Facility facility) {
         return facilityRepository.updateFacility(facility);
     }
+
+    @Override
+    public boolean create(Facility facility) {
+        return facilityRepository.create(facility);
+    }
+
+    @Override
+    public List<Facility> search(String name, String facilityType) {
+        return facilityRepository.search(name,facilityType);
+    }
 }
